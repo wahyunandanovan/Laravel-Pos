@@ -31,9 +31,9 @@
                 <tr>
                     <td>{{$product->id}}</td>
                     <td>{{$product->name}}</td>
-                    <td><img class="product-img" src="{{ Storage::url($product->image) }}" alt=""></td>
+                    <td><img class="product-img" src="/storage/{{ $product->image }}" alt=""></td>
                     <td>{{$product->barcode}}</td>
-                    <td>{{$product->price}}</td>
+                    <td>Rp. {{rtrim(number_format($product->price, 2, ',', '.'), '0')}}-</td>
                     <td>{{$product->quantity}}</td>
                     <td>
                         <span class="right badge badge-{{ $product->status ? 'success' : 'danger' }}">{{$product->status ? __('common.Active') : __('common.Inactive') }}</span>

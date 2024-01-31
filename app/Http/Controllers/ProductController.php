@@ -8,6 +8,7 @@ use App\Http\Resources\ProductResource;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class ProductController extends Controller
 {
@@ -50,7 +51,9 @@ class ProductController extends Controller
         $image_path = '';
 
         if ($request->hasFile('image')) {
-            $image_path = $request->file('image')->store('products', 'public');
+            $imageName = Str::uuid()->toString() . '.' . $request->file('image')->getClientOriginalExtension();
+            // Store image
+            $image_path = $request->file('image')->storeAs('products', $imageName, 'public');
         }
 
         $product = Product::create([
@@ -112,8 +115,9 @@ class ProductController extends Controller
             if ($product->image) {
                 Storage::delete($product->image);
             }
+            $imageName = Str::uuid()->toString() . '.' . $request->file('image')->getClientOriginalExtension();
             // Store image
-            $image_path = $request->file('image')->store('products', 'public');
+            $image_path = $request->file('image')->storeAs('products', $imageName, 'public');
             // Save to Database
             $product->image = $image_path;
         }
