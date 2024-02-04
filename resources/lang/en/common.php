@@ -23,8 +23,8 @@ return [
     'Created_At'    => 'Created At',
     'Actions'       => 'Actions',
     'Active'        => 'Active',
-    'Inactive'      => 'Inactive',
-    'More_info'     => 'More info',
+    'Inactive'      => 'Tidak Aktif',
+    'More_info'     => 'Info Selengkapnya',
 
     //==========================================
     // Footer messages
