@@ -36,13 +36,13 @@ return [
     //==========================================
     // Navigation bar messages
     //==========================================
-    'Notifications'         => ':total Notifications',
-    'new_messages'          => ':total new messages',
-    'total_friend_request'  => ':total friend requests',
-    'total_new_reports'     => ':total new reports',
-    'see_all'               => 'See All Notifications',
-    'no_mins'               => ':mins mins',
-    'no_hours'              => ':hours hours',
-    'no_days'               => ':days days',
+    'Notifications'         => ':total Notifikasi',
+    'new_messages'          => ':total pesan baru',
+    'total_friend_request'  => ':total permintaan teman',
+    'total_new_reports'     => ':total laporan baru',
+    'see_all'               => 'lihat semua',
+    'no_mins'               => ':menit menit',
+    'no_hours'              => ':jam jam',
+    'no_days'               => ':hari hari',
 
 ];
